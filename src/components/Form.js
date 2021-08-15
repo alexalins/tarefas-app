@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import { connect } from 'react-redux';
+import { addTodo } from '../actions';
 import Input from './Input';
 
 class Form extends Component {
@@ -17,7 +19,7 @@ class Form extends Component {
   }
 
   onPress() {
-    console.log(this.state.text)
+    this.props.dispatchAddTodo(this.state.text);
   }
 
   render() {
@@ -35,7 +37,11 @@ class Form extends Component {
   }
 }
 
-export default Form;
+const mapDispatchToProps = {
+    dispatchAddTodo: addTodo
+}
+
+export default connect(null, mapDispatchToProps)(Form);
 
 const style = StyleSheet.create({
     formContainer: {
