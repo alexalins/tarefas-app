@@ -5,7 +5,6 @@ import { createStore } from 'redux';
 //
 import Form from './components/Form';
 import rootReducer from './reducers';
-
 const store = createStore(rootReducer);
 
 class TodoApp extends Component {

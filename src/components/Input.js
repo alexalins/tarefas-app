@@ -14,6 +14,7 @@ export default Input;
 const style = StyleSheet.create({
     input: {
         paddingLeft: 15,
-        paddingBottom: 15
+        paddingBottom: 15,
+        backgroundColor: '#e6e6e6'
     }
 });

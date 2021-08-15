@@ -45,10 +45,12 @@ export default connect(null, mapDispatchToProps)(Form);
 
 const style = StyleSheet.create({
     formContainer: {
-        flexDirection: 'row'
+        flexDirection: 'row',
+        paddingTop: 30
     },
     inputContainer: {
-        flex: 4
+        flex: 4,
+        paddingLeft: 10 
     },
     buttonContainer: {
         flex: 1
